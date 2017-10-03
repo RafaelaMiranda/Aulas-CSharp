@@ -1,0 +1,7 @@
+Data: 12/09/2017 16:40:35
+Erro: Parameter cannot be null, original
+Arquivo: Aula-02
+Tipo: System.ArgumentException
+Método: Void InvokeHandler(System.Object, System.Windows.RoutedEventArgs)
+Linha:0
+----------------------------------------------------

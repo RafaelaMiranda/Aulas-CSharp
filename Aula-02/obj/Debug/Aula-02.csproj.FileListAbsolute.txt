@@ -1,0 +1,81 @@
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\bin\Debug\Aula-02.exe.config
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\bin\Debug\Aula-02.exe
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\bin\Debug\Aula-02.pdb
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\Controles.g.cs
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\MainWindow.g.cs
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\App.g.cs
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02_MarkupCompile.cache
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02_MarkupCompile.lref
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\Controles.baml
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\MainWindow.baml
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.g.resources
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\Aula_02.Properties.Resources.resources
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.csproj.GenerateResource.Cache
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.exe
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.pdb
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.csprojResolveAssemblyReference.cache
+D:\Aulas-CSharp-master\Aula-02\bin\Debug\Aula-02.exe.config
+D:\Aulas-CSharp-master\Aula-02\bin\Debug\Aula-02.exe
+D:\Aulas-CSharp-master\Aula-02\bin\Debug\Aula-02.pdb
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.csprojResolveAssemblyReference.cache
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\Datas.g.cs
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\Controles.g.cs
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\MainWindow.g.cs
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\App.g.cs
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02_MarkupCompile.cache
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02_MarkupCompile.lref
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\Datas.baml
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\Controles.baml
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\MainWindow.baml
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.g.resources
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\Aula_02.Properties.Resources.resources
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.csproj.GenerateResource.Cache
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.exe
+D:\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.pdb
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\Datas.g.cs
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-02\obj\Debug\Datas.baml
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\bin\Debug\Aula-02.exe.config
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\bin\Debug\Aula-02.exe
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\bin\Debug\Aula-02.pdb
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.csprojResolveAssemblyReference.cache
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Arquivo.g.cs
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Datas.g.cs
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Controles.g.cs
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\MainWindow.g.cs
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\App.g.cs
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02_MarkupCompile.cache
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02_MarkupCompile.lref
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Arquivo.baml
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Datas.baml
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Controles.baml
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\MainWindow.baml
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.g.resources
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula_02.Properties.Resources.resources
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.csproj.GenerateResource.Cache
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.exe
+D:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.pdb
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\bin\Debug\Aula-02.exe.config
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\bin\Debug\Aula-02.exe
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\bin\Debug\Aula-02.pdb
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.csprojResolveAssemblyReference.cache
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Arquivo.g.cs
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Datas.g.cs
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Controles.g.cs
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\MainWindow.g.cs
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\App.g.cs
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02_MarkupCompile.cache
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02_MarkupCompile.lref
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Arquivo.baml
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Datas.baml
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Controles.baml
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\MainWindow.baml
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.g.resources
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula_02.Properties.Resources.resources
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.csproj.GenerateResource.Cache
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.exe
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.pdb
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\bin\Debug\AppManager.dll
+E:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\bin\Debug\AppManager.pdb
+F:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\bin\Debug\Aula-02.exe.config
+F:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.exe
+F:\Fatec\4º Semestre\Aulas-CSharp-master\Aula-02\obj\Debug\Aula-02.pdb

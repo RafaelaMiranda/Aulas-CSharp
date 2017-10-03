@@ -1,0 +1,27 @@
+﻿<Window x:Class="Aula_01.Controles"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aula_01"
+        mc:Ignorable="d"
+        Title="Controles" Height="300" Width="300" WindowStartupLocation="CenterScreen">
+	<Grid Background="DarkRed">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Label x:Name="Label" Style="{StaticResource Primeira_Label}"/>
+		<TextBox x:Name="TextBox" TextChanged="TextBox_OnTextChanged" Style="{StaticResource TextBox}" Margin="10,93,0,0" Width="271">
+			<TextBox.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="0.072"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</TextBox.RenderTransform>
+		</TextBox>
+		<Label x:Name="Label1" Style="{StaticResource Segunda_Label}" Margin="152,20,0,0"/>
+		<Button Click="Button_Click" Style="{StaticResource Botao}" Margin="10,130,10,113">Limpar</Button>
+	</Grid>
+</Window>

@@ -1,0 +1,51 @@
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\bin\Debug\Aula-01.exe.config
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\bin\Debug\Aula-01.exe
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\bin\Debug\Aula-01.pdb
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\obj\Debug\Aula-01.csprojResolveAssemblyReference.cache
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\obj\Debug\Controles.g.cs
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\obj\Debug\MainWindow.g.cs
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\obj\Debug\App.g.cs
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\obj\Debug\Aula-01_MarkupCompile.cache
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\obj\Debug\Aula-01_MarkupCompile.lref
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\obj\Debug\App.baml
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\obj\Debug\Controles.baml
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\obj\Debug\MainWindow.baml
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\obj\Debug\Aula-01.g.resources
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\obj\Debug\Aula_01.Properties.Resources.resources
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\obj\Debug\Aula-01.csproj.GenerateResource.Cache
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\obj\Debug\Aula-01.exe
+C:\Users\Rafaela Gomes\Downloads\Aulas\Aula-01\obj\Debug\Aula-01.pdb
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\bin\Debug\Aula-01.exe.config
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\bin\Debug\Aula-01.exe
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\bin\Debug\Aula-01.pdb
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.csprojResolveAssemblyReference.cache
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\obj\Debug\Controles.g.cs
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\obj\Debug\MainWindow.g.cs
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\obj\Debug\App.g.cs
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01_MarkupCompile.cache
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01_MarkupCompile.lref
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\obj\Debug\App.baml
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\obj\Debug\Controles.baml
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\obj\Debug\MainWindow.baml
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.g.resources
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\obj\Debug\Aula_01.Properties.Resources.resources
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.csproj.GenerateResource.Cache
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.exe
+C:\Users\0040481612045\Downloads\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.pdb
+D:\Aulas-CSharp-master\Aula-01\bin\Debug\Aula-01.exe.config
+D:\Aulas-CSharp-master\Aula-01\bin\Debug\Aula-01.exe
+D:\Aulas-CSharp-master\Aula-01\bin\Debug\Aula-01.pdb
+D:\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.csprojResolveAssemblyReference.cache
+D:\Aulas-CSharp-master\Aula-01\obj\Debug\Controles.g.cs
+D:\Aulas-CSharp-master\Aula-01\obj\Debug\MainWindow.g.cs
+D:\Aulas-CSharp-master\Aula-01\obj\Debug\App.g.cs
+D:\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01_MarkupCompile.cache
+D:\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01_MarkupCompile.lref
+D:\Aulas-CSharp-master\Aula-01\obj\Debug\App.baml
+D:\Aulas-CSharp-master\Aula-01\obj\Debug\Controles.baml
+D:\Aulas-CSharp-master\Aula-01\obj\Debug\MainWindow.baml
+D:\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.g.resources
+D:\Aulas-CSharp-master\Aula-01\obj\Debug\Aula_01.Properties.Resources.resources
+D:\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.csproj.GenerateResource.Cache
+D:\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.exe
+D:\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.pdb

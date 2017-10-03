@@ -1,0 +1,4 @@
+E:\Fatec\4º Semestre\Aulas-CSharp-master\AppManager\bin\Debug\AppManager.dll
+E:\Fatec\4º Semestre\Aulas-CSharp-master\AppManager\bin\Debug\AppManager.pdb
+E:\Fatec\4º Semestre\Aulas-CSharp-master\AppManager\obj\Debug\AppManager.dll
+E:\Fatec\4º Semestre\Aulas-CSharp-master\AppManager\obj\Debug\AppManager.pdb

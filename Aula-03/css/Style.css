@@ -1,0 +1,135 @@
+﻿/* === Navbar === */
+
+.cabecalho {
+    background: #5f9ea0;
+    border-bottom: 1px solid black;
+    box-shadow: 5px 5px 5px #8f9093;
+    height: 90px;
+    position: relative;
+    width: 100%;
+}
+
+.logo {
+    height: 20px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 50px;
+}
+
+.menu {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+div ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+    text-align: right;
+}
+
+div ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+div ul li a:hover {
+    color: #313335;
+}
+
+.separator:hover {
+    color: white;
+}
+
+/* === Main === */
+
+body {
+    margin: 0;
+    background-color: #dce0e5;
+    color: #313335;
+    font-family: 'Molengo', sans-serif;
+}
+
+.cover {
+    display: table;
+    width: 100%;
+}
+
+.cover-text {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.cover .cover-text h1 {
+    border-right: 2px solid;
+    width: 13ch;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 40%;
+    text-align: center;
+    -webkit-animation: typing 3s steps(21, end),
+                       blink-caret .5s step-end infinite alternate;
+}
+
+.cover .cover-text i{
+    font-size: 40px;
+}
+
+.social-media{
+    color: white;
+    border: 1px solid white;
+    background-color: #a8abaf;
+    margin-top: 500px;
+}
+
+.twitter {
+    font-size: 18px;
+    color: #0084b4
+}
+
+.facebook {
+    font-size: 18px;
+    color: #3b5998;
+}
+
+.instagram{
+    margin-left: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    color: white;
+    height: 38px;
+    width: 43px;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+div .social-media h2{
+    margin-left: 12px;
+    text-align: left;
+}
+
+div #startWlIcon{
+    background: url(../images/icon-libras.png) no-repeat center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+#startWlAuto.wl-element-right {
+    top: 14%;
+    right: 0;
+    background: transparent;
+}

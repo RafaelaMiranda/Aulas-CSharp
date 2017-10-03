@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<link href="css/Style.css" rel="stylesheet" />
+
+<link href="https://fonts.googleapis.com/css?family=Molengo" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- ÁREA CABEÇALHO -->
+        <div class="cabecalho">
+            <!--LOGOMARCA -->
+            <div class="logo">
+					<a href="Default.aspx">
+                        <img src="images/LogoRafa.png" />
+					</a>
+            </div>
+
+            <div>
+                <ul class="menu">
+                    <li>
+                        <a href="Default.aspx">Home</a>
+                    </li>
+                    <li>
+                        <a class="separator">|</a>
+                    </li>
+                    <li>
+                        <a href="Sobre.aspx">Sobre</a>
+                    </li>
+                    <li>
+                        <a class="separator">|</a>
+                    </li>
+                    <li>
+                        <a href="http://www.google.com" target="blank">Google</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <!-- ÁREA DE CONTEÚDO -->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="social-media">
+				<h2>Redes Sociais</h2>
+                <a href="http://www.twitter.com/itsrafagomes" target="blank" class="twitter">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x"></i>
+                    </span>
+                </a>
+                
+                <a href="http://www.facebook.com/itsrafagomes" target="blank" class="facebook">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-facebook-official fa-stack-1x"></i>
+                    </span>
+                </a>
+
+				<a href="http://www.instagram.com/itsrafagomes" target="blank" class="instagram">
+						    <span class="fa-stack fa-lg">
+							    <i class="fa fa-square-o fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x"></i>	
+                            </span>
+                </a>
+            </div>
+        </div>
+    </form>
+	<script src="http://arquivos.weblibras.com.br/auto/wl-min.js"></script>
+        <script>
+            var wl = new WebLibras();
+        </script>
+
+</body>
+</html>

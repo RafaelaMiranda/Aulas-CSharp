@@ -1,0 +1,75 @@
+﻿<Application x:Class="Aula_01.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Aula_01"
+             StartupUri="MainWindow.xaml">
+	<Application.Resources>
+		<!-- PRINCIPAL -->
+		<Style x:Key="Label_Nome" TargetType="Label">
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="HorizontalAlignment" Value="Left" />
+			<Setter Property="Margin" Value="10, 122, 0, 158" />
+			<Setter Property="VerticalAlignment" Value="Center" />
+			<Setter Property="Height" Value="40" />
+			<Setter Property="Foreground" Value="White" />
+		</Style>
+
+		<Style x:Key="TextBox_Nome" TargetType="TextBox">
+			<Setter Property="TextAlignment" Value="Center" />
+			<Setter Property="Margin" Value="10, 149, 10, 146" />
+			<Setter Property="VerticalAlignment" Value="Center" />
+			<Setter Property="Height" Value="25" />
+			<Setter Property="FontWeight" Value="Bold" />
+		</Style>
+
+		<Style x:Key="Botao_Nome" TargetType="Button">
+			<Setter Property="Margin" Value="147, 197, 147, 89" />
+		</Style>
+
+		<Style x:Key="Menu" TargetType="Menu">
+			<Setter Property="HorizontalAlignment" Value="Left" />
+			<Setter Property="Height" Value="24" />
+			<Setter Property="VerticalAlignment" Value="Top" />
+			<Setter Property="Width" Value="403" />
+		</Style>
+
+		<!-- CONTROLES -->
+		<Style x:Key="Primeira_Label" TargetType="Label">
+			<Setter Property="Content" Value="" />
+			<Setter Property="Foreground" Value="White" />
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="HorizontalAlignment" Value="Left" />
+			<Setter Property="Margin" Value="10,20,0,0" />
+			<Setter Property="VerticalAlignment" Value="Top" />
+			<Setter Property="RenderTransformOrigin" Value="-0.109,-0.167" />
+			<Setter Property="Width" Value="130" />
+			<Setter Property="FontSize" Value="22" />
+		</Style>
+
+		<Style x:Key="TextBox" TargetType="TextBox">
+			<Setter Property="Height" Value="23" />
+			<Setter Property="HorizontalAlignment" Value="Left" />
+			<Setter Property="Margin" Value="19,64,0,0" />
+			<Setter Property="TextWrapping" Value="Wrap" />
+			<Setter Property="VerticalAlignment" Value="Top" />
+			<Setter Property="Width" Value="255" />
+			<Setter Property="RenderTransformOrigin" Value="0.5,0.5" />
+		</Style>
+
+		<Style x:Key="Segunda_Label" TargetType="Label">
+			<Setter Property="Content" Value="" />
+			<Setter Property="HorizontalAlignment" Value="Left" />
+			<Setter Property="Margin" Value="152,20,0,0" />
+			<Setter Property="Foreground" Value="OrangeRed" />
+			<Setter Property="VerticalAlignment" Value="Top" />
+			<Setter Property="Width" Value="130" />
+			<Setter Property="RenderTransformOrigin" Value="-0.109,-0.167" />
+			<Setter Property="FontWeight" Value="Bold" />
+			<Setter Property="FontSize" Value="22" />
+		</Style>
+
+		<Style x:Key="Botao" TargetType="Button">
+			<Setter Property="Margin" Value="94,101,103,142" />
+		</Style>
+	</Application.Resources>
+</Application>
