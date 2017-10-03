@@ -40,6 +40,12 @@
                         <a class="separator">|</a>
                     </li>
                     <li>
+                        <a href="Cadastro.aspx">Cadastro</a>
+                    </li>
+                    <li>
+                        <a class="separator">|</a>
+                    </li>
+                    <li>
                         <a href="http://www.google.com" target="blank">Google</a>
                     </li>
                 </ul>
