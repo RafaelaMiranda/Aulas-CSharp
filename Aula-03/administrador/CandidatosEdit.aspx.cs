@@ -4,17 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//    BIBLIOTECAS PARA BANCO DE DADOS
+
 using System.Data;
 using AppDatabase;
 
-public partial class Cadastro : System.Web.UI.Page
+public partial class administrador_CandidatosEdit : System.Web.UI.Page
 {
    protected void Page_Load(object sender, EventArgs e)
    {
-      if (! IsPostBack)
+      if (!IsPostBack)
       {
          LoadCompetencias();
+         LoadCandidatos();
       }
    }
 
@@ -33,13 +34,22 @@ public partial class Cadastro : System.Web.UI.Page
       ole.ConnectionString = conexao;
       DataTable tb = (DataTable)ole.Query("SELECT * FROM Competencias ORDER BY Nome;");
 
-      for(int i=0; i<= tb.Rows.Count -1; i++)
+      for (int i = 0; i <= tb.Rows.Count - 1; i++)
       {
          Competencias.Items.Add(new ListItem(tb.Rows[i]["Nome"].ToString(), tb.Rows[i]["CompetenciaId"].ToString()));
       }
    }
 
+   // CARREGA OS CANDIODATOS NO GRID
+   protected void LoadCandidatos()
+   {
+      ole.ConnectionString = conexao;
+      DataTable tb = (DataTable)ole.Query("SELECT * FROM Candidatos WHERE Nome LIKE '%" + BuscarNome.Text + "%' ORDER BY Nome;");
+      Candidatos.DataSource = tb;
+      Candidatos.DataBind();
+   }
 
+   // GRAVA A EDIÇÃO
    protected void Gravar_Click(object sender, EventArgs e)
    {
       if (Nome.Text.Trim() == "")
@@ -63,9 +73,6 @@ public partial class Cadastro : System.Web.UI.Page
 
             // grava as competencias do candidato
             GravaCompetencias(candidatoId);
-
-            Entrada.Visible = false;
-            fimCadastro.Visible = true;
             limpar();
          }
          else
@@ -83,8 +90,7 @@ public partial class Cadastro : System.Web.UI.Page
       Resumo.Text = "";
    }
 
-
-   private void GravaCompetencias( string candidatoId)
+   private void GravaCompetencias(string candidatoId)
    {
       // GRAVA AS COMPETENCIAS DO CANDIDATO 
 
@@ -94,10 +100,60 @@ public partial class Cadastro : System.Web.UI.Page
       {
          if (Competencias.Items[i].Selected)
          {
-           string comando = "INSERT INTO CandidatosCompetencias(CompetenciaId,CandidatoId) VALUES(" + Competencias.Items[i].Value.ToString() + "," + candidatoId + ");";
+            string comando = "INSERT INTO CandidatosCompetencias(CompetenciaId,CandidatoId) VALUES(" + Competencias.Items[i].Value.ToString() + "," + candidatoId + ");";
 
             ole.Query(comando);
          }
       }
+   }
+
+
+   protected void Buscar_Click(object sender, EventArgs e)
+   {
+
+   }
+
+   protected void LimparBusca_Click(object sender, EventArgs e)
+   {
+
+   }
+
+   protected void Candidatos_SelectedIndexChanged(object sender, EventArgs e)
+   {
+       ole.ConnectionString = conexao;
+       DataTable tb = (DataTable) ole.Query("SELECT * FROM Candidatos WHERE CandidatoId="+Candidatos.SelectedRow.Cells[1].Text.ToString());
+
+       if (tb.Rows.Count == 1)
+       {
+           CandidatoId.Text = tb.Rows[0]["CandidatoId"].ToString();
+           Nome.Text = tb.Rows[0]["Nome"].ToString();
+           Email.Text = tb.Rows[0]["Email"].ToString();
+           Telefone.Text = tb.Rows[0]["Telefone"].ToString();
+           Resumo.Text = tb.Rows[0]["Resumo"].ToString();
+
+           // SELECIONA AS COMPETENCIAS DESTE CANDIDATO
+           DefineCompetencias(CandidatoId.Text);
+        }
+   }
+
+    protected void DefineCompetencias(string candidatoId)
+    {
+        ole.ConnectionString = conexao;
+        DataTable tb = new DataTable();
+        foreach (ListItem it in Competencias.Items)
+        {
+            tb = (DataTable) ole.Query("SELECT * FROM CandidatosCompetencias WHERE CandidatoId="+candidatoId +" AND CompetenciaId="+ it.Value + ";");
+            if (tb.Rows.Count == 1)
+            {
+                it.Selected = true;
+            }
+
+            tb.Dispose();
+        }
+    } 
+
+   protected void Excluir_Click(object sender, EventArgs e)
+   {
+
    }
 }

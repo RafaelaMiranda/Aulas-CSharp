@@ -1,0 +1,107 @@
+﻿/* DEFINIÇÕES DE CSS */
+body {
+   margin: 0;
+   background-color: #dddddd;
+   color: #333333;
+   font-family: Arial, helvetica;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+   height: 90px;
+   background-color: #72b2b0;
+   border-bottom: 1px solid #c0c0c0;
+   width: 100%;
+   position: relative;
+}
+
+.logomarca {
+   width: 90px;
+   text-align: center;
+   height: 90px;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+
+.menu {
+   position: absolute;
+   right: 10px;
+   bottom: 10px;
+}
+
+   .menu a {
+      color: white;
+      font-size: 12px;
+      margin-right: 10px;
+      text-decoration: none;
+      font-weight: bold;
+   }
+
+      .menu a:hover {
+         color: #6b6d6d;
+      }
+
+/* CONTEÚDO */
+.conteudo {
+   min-height: 1300px;
+   padding: 40px;
+   background-color: white;
+}
+
+/* RODAPÉ */
+.rodape {
+   height: 200px;
+   font-size: 12px;
+   color: #808080;
+   padding: 14px;
+}
+
+/* CONTROLES DE FORMULÁRIO */
+label {
+   font-size: 11px;
+   text-transform: uppercase;
+   margin-top: 14px;
+}
+
+.form-control {
+   display: inline-block;
+   width:100%;
+   padding: 10px;
+   font-size: 1.1em;
+   color: #555;
+   background-color: #fff;
+   border: 1px solid #c0c0c0;
+   border-radius: 4px;
+   font-family: inherit;
+   margin-bottom:14px;
+}
+
+   .form-control:focus {
+      border-color: #66afe9;
+      outline: 0;
+   }
+
+input[type="submit"], input[type="image"] {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #c0c0c0;
+   color: inherit;
+   border-radius: 4px;
+   font-size: 14px;
+   background-color: #ffffff;
+   font-weight: 600;
+}
+
+   input[type="submit"]:link, input[type="image"]:link {
+      background-color: #ffffff;
+   }
+
+   input[type="submit"]:hover, input[type="image"]:hover {
+      background-color: #e4e4e4;
+   }
+
+   input[type="submit"]:active, input[type="image"]:active {
+      background-color: #c4c4c4;
+   }
