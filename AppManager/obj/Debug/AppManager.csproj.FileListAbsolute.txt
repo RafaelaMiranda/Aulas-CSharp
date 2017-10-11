@@ -1,4 +1,9 @@
-E:\Fatec\4º Semestre\Aulas-CSharp-master\AppManager\bin\Debug\AppManager.dll
-E:\Fatec\4º Semestre\Aulas-CSharp-master\AppManager\bin\Debug\AppManager.pdb
-E:\Fatec\4º Semestre\Aulas-CSharp-master\AppManager\obj\Debug\AppManager.dll
-E:\Fatec\4º Semestre\Aulas-CSharp-master\AppManager\obj\Debug\AppManager.pdb
+E:/Fatec/4º Semestre/Aulas-CSharp-master/AppManager/bin/Debug/AppManager.dll
+E:/Fatec/4º Semestre/Aulas-CSharp-master/AppManager/bin/Debug/AppManager.pdb
+E:/Fatec/4º Semestre/Aulas-CSharp-master/AppManager/obj/Debug/AppManager.dll
+E:/Fatec/4º Semestre/Aulas-CSharp-master/AppManager/obj/Debug/AppManager.pdb
+/media/rafaela/RAFAELA/Fatec/4º Semestre/C#/Aulas-CSharp-master/AppManager/bin/Debug/AppManager.dll
+/media/rafaela/RAFAELA/Fatec/4º Semestre/C#/Aulas-CSharp-master/AppManager/bin/Debug/AppManager.pdb
+/media/rafaela/RAFAELA/Fatec/4º Semestre/C#/Aulas-CSharp-master/AppManager/obj/Debug/AppManager.csproj.CoreCompileInputs.cache
+/media/rafaela/RAFAELA/Fatec/4º Semestre/C#/Aulas-CSharp-master/AppManager/obj/Debug/AppManager.dll
+/media/rafaela/RAFAELA/Fatec/4º Semestre/C#/Aulas-CSharp-master/AppManager/obj/Debug/AppManager.pdb

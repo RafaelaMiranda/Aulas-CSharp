@@ -49,6 +49,9 @@ D:\Aulas-CSharp-master\Aula-01\obj\Debug\Aula_01.Properties.Resources.resources
 D:\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.csproj.GenerateResource.Cache
 D:\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.exe
 D:\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.pdb
+<<<<<<< HEAD
 E:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-01\bin\Debug\Aula-01.exe.config
 E:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.exe
 E:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-01\obj\Debug\Aula-01.pdb
+=======
+>>>>>>> testing

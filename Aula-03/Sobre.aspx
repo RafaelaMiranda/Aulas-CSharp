@@ -3,8 +3,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<<<<<<< HEAD
    <div>
       <h1>Sobre</h1>
    </div>
+=======
+            <div class="cover">
+                <div class="cover-text">
+                    <h1><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>Rafaela Gomes</h1>
+                </div>
+            </div>
+>>>>>>> testing
 </asp:Content>
 

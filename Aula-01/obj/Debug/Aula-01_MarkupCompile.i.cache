@@ -4,17 +4,29 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 E:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-01\obj\Debug\
+=======
+D:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-01\obj\Debug\
+>>>>>>> testing
 Aula_01
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 E:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-01\App.xaml
+=======
+D:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-01\App.xaml
+>>>>>>> testing
 22142603869
 
 10-1935443033
 13738642453
 Controles.xaml;MainWindow.xaml;
 
+<<<<<<< HEAD
 False
+=======
+True
+>>>>>>> testing
 
