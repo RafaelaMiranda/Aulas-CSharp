@@ -96,6 +96,7 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
       Telefone.Text = "";
       Resumo.Text = "";
       LoadCompetencias();
+      LoadCandidatos();
       Gravar.Visible = false;
       Excluir.Visible = false;
     }
@@ -146,7 +147,7 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
          // SELECIONA AS COMPETENCIAS DESTE CANDIDATO
          DefineCompetencias(CandidatoId.Text);
 
-            // ATIVA OS BOTÕES E O CANDIDATOID
+          // ATIVA OS BOTÕES E O CANDIDATOID
           CandidatoId.Visible = true;
           Gravar.Visible = true;
           Excluir.Visible = true;
@@ -174,6 +175,9 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
 
    protected void Excluir_Click(object sender, EventArgs e)
    {
-
-   }
+       ole.ConnectionString = conexao;
+       ole.Query("DELETE FROM CandidatosCompetencias WHERE CandidatoId=" + CandidatoId.Text + ";");
+       ole.Query("DELETE FROM Candidatos WHERE CandidatoId=" + CandidatoId.Text + ";");
+       limpar();
+    }
 }
