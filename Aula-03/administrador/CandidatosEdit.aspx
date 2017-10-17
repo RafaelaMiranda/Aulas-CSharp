@@ -6,16 +6,17 @@
    <!-- BUSCAR -->
    <div style="padding: 20px;">
       <asp:TextBox ID="BuscarNome" Width="180px" CssClass="form-control" runat="server"></asp:TextBox>
-      <asp:Button ID="Buscar" OnClick="Buscar_Click" runat="server" Text="Buscar" Width="80px"/>
-      <asp:Button ID="LimparBusca" OnClick="LimparBusca_Click" runat="server" Text="X" Width="50px"/>
+      <asp:Button ID="Buscar" Width="80px" OnClick="Buscar_Click" runat="server" Text="Buscar" />
+      <asp:Button ID="LimparBusca" Width="50px" OnClick="LimparBusca_Click" runat="server" Text="X" />
    </div>
    <!-- GRID -->
    <div style="padding: 20px;">
       <asp:Label ID="Label2" runat="server" ForeColor="#ff6a00" Font-Size="30px" Text="Lista de Candidatos" />
       <br />
-       <asp:Panel runat="server" Height="300px" ScrollBars="Vertical" ID="Panel1">
-            <asp:GridView Width="100%" ID="Candidatos" AutoGenerateColumns="true" AutoGenerateSelectButton="true" OnSelectedIndexChanged="Candidatos_SelectedIndexChanged" CellPadding="8" HeaderStyle-BackColor="#dfdfdf" BorderColor="#cccccc" runat="server"></asp:GridView>
-       </asp:Panel>
+      <asp:Panel ID="Panel1" Height="300px" ScrollBars="Vertical" runat="server">
+         <asp:GridView ID="Candidatos" Width="100%" AutoGenerateColumns="true" AutoGenerateSelectButton="true" OnSelectedIndexChanged="Candidatos_SelectedIndexChanged" CellPadding="8" HeaderStyle-BackColor="#dfdfdf" BorderColor="#cccccc" runat="server">
+         </asp:GridView>
+      </asp:Panel>
    </div>
    <!-- CONTROLES DE EDIÇÃO -->
    <div style="padding: 20px;">
@@ -23,9 +24,9 @@
       <div style="float: left; width: 40%;">
          <asp:Label ID="MsgErro" runat="server" />
          <br />
-          
-          <asp:label ID="CandidatoId" runat="server"></asp:label>
-          <br/><br/>
+
+         <asp:Label ID="CandidatoId" CssClass="form-control" runat="server"></asp:Label>
+
          <label>Nome</label>
          <asp:TextBox ID="Nome" CssClass="form-control" runat="server"></asp:TextBox>
          <label>Email</label>
@@ -37,7 +38,7 @@
          <br />
          <br />
          <asp:Button ID="Gravar" OnClick="Gravar_Click" runat="server" Text="Gravar" />
-          <br/><br/>
+         <br/><br/>
          <asp:Button ID="Excluir" OnClick="Excluir_Click" runat="server" Text="Excluir" />
       </div>
       <!-- FORMULÁRIO DAS COMPETENCIAS -->

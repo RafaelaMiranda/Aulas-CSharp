@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Activities;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,6 +18,10 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
          LoadCompetencias();
          LoadCandidatos();
       }
+       CandidatoId.Visible = false;
+       Gravar.Visible = false;
+       Excluir.Visible = false;
+       LimparBusca.Visible = false;
    }
 
    // referencia de strings de conexão:https://www.connectionstrings.com
@@ -34,6 +39,7 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
       ole.ConnectionString = conexao;
       DataTable tb = (DataTable)ole.Query("SELECT * FROM Competencias ORDER BY Nome;");
 
+      Competencias.Items.Clear();
       for (int i = 0; i <= tb.Rows.Count - 1; i++)
       {
          Competencias.Items.Add(new ListItem(tb.Rows[i]["Nome"].ToString(), tb.Rows[i]["CompetenciaId"].ToString()));
@@ -49,6 +55,7 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
       Candidatos.DataBind();
    }
 
+
    // GRAVA A EDIÇÃO
    protected void Gravar_Click(object sender, EventArgs e)
    {
@@ -62,17 +69,15 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
       }
       else
       {
-         string sql = "INSERT INTO Candidatos(Nome,Email,Telefone,Resumo) VALUES('" + Nome.Text + "','" + Email.Text + "','" + Telefone.Text + "','" + Resumo.Text + "');";
+          string sql = "UPDATE Candidatos SET Nome='" + Nome.Text + "',Email='" + Email.Text + "',Telefone='" +
+                       Telefone.Text + "',Resumo='" + Resumo.Text + "'WHERE CandidatoId=" + CandidatoId.Text + ";";
 
          ole.ConnectionString = conexao;
          if ((int)ole.Query(sql) == 1)
          {
-            //OBTEM O ID DO CANDIDATO QUE FOI INSERIDO
-            DataTable t = (DataTable)ole.Query("SELECT MAX(CandidatoId) AS ID FROM Candidatos");
-            string candidatoId = t.Rows[0]["ID"].ToString();
-
             // grava as competencias do candidato
-            GravaCompetencias(candidatoId);
+            GravaCompetencias(CandidatoId.Text);
+
             limpar();
          }
          else
@@ -84,17 +89,23 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
 
    private void limpar()
    {
+      CandidatoId.Text = "";
+      CandidatoId.Visible = false;
       Nome.Text = "";
       Email.Text = "";
       Telefone.Text = "";
       Resumo.Text = "";
-   }
+      LoadCompetencias();
+      Gravar.Visible = false;
+      Excluir.Visible = false;
+    }
 
    private void GravaCompetencias(string candidatoId)
    {
       // GRAVA AS COMPETENCIAS DO CANDIDATO 
-
       ole.ConnectionString = conexao;
+
+      ole.Query("DELETE FROM CandidatosCompetencias WHERE CandidatoId=" + candidatoId + ";");
 
       for (int i = 0; i <= Competencias.Items.Count - 1; i++)
       {
@@ -110,47 +121,56 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
 
    protected void Buscar_Click(object sender, EventArgs e)
    {
-
+      LimparBusca.Visible = true;
+      LoadCandidatos();
    }
 
    protected void LimparBusca_Click(object sender, EventArgs e)
    {
-
+      BuscarNome.Text = "";
+      LoadCandidatos();
    }
 
    protected void Candidatos_SelectedIndexChanged(object sender, EventArgs e)
    {
-       ole.ConnectionString = conexao;
-       DataTable tb = (DataTable) ole.Query("SELECT * FROM Candidatos WHERE CandidatoId="+Candidatos.SelectedRow.Cells[1].Text.ToString());
+      ole.ConnectionString = conexao;
+      DataTable tb = (DataTable)ole.Query("SELECT * FROM Candidatos WHERE CandidatoId=" + Candidatos.SelectedRow.Cells[1].Text.ToString());
+      if (tb.Rows.Count == 1)
+      {
+         CandidatoId.Text = tb.Rows[0]["CandidatoId"].ToString();
+         Nome.Text = tb.Rows[0]["Nome"].ToString();
+         Email.Text = tb.Rows[0]["Email"].ToString();
+         Telefone.Text = tb.Rows[0]["Telefone"].ToString();
+         Resumo.Text = tb.Rows[0]["Resumo"].ToString();
 
-       if (tb.Rows.Count == 1)
-       {
-           CandidatoId.Text = tb.Rows[0]["CandidatoId"].ToString();
-           Nome.Text = tb.Rows[0]["Nome"].ToString();
-           Email.Text = tb.Rows[0]["Email"].ToString();
-           Telefone.Text = tb.Rows[0]["Telefone"].ToString();
-           Resumo.Text = tb.Rows[0]["Resumo"].ToString();
+         // SELECIONA AS COMPETENCIAS DESTE CANDIDATO
+         DefineCompetencias(CandidatoId.Text);
 
-           // SELECIONA AS COMPETENCIAS DESTE CANDIDATO
-           DefineCompetencias(CandidatoId.Text);
+            // ATIVA OS BOTÕES E O CANDIDATOID
+          CandidatoId.Visible = true;
+          Gravar.Visible = true;
+          Excluir.Visible = true;
         }
    }
 
-    protected void DefineCompetencias(string candidatoId)
-    {
-        ole.ConnectionString = conexao;
-        DataTable tb = new DataTable();
-        foreach (ListItem it in Competencias.Items)
-        {
-            tb = (DataTable) ole.Query("SELECT * FROM CandidatosCompetencias WHERE CandidatoId="+candidatoId +" AND CompetenciaId="+ it.Value + ";");
-            if (tb.Rows.Count == 1)
-            {
-                it.Selected = true;
-            }
-
-            tb.Dispose();
-        }
-    } 
+   protected void DefineCompetencias(string candidatoId)
+   {
+      ole.ConnectionString = conexao;
+      DataTable tb = new DataTable();
+      foreach (ListItem it in Competencias.Items)
+      {
+         tb = (DataTable)ole.Query("SELECT * FROM CandidatosCompetencias WHERE CandidatoId=" + candidatoId + " AND CompetenciaId=" + it.Value + ";");
+          if (tb.Rows.Count == 1)
+          {
+              it.Selected = true;
+          }
+          else
+          {
+              it.Selected = false;
+          }
+         tb.Dispose();
+      }
+   }
 
    protected void Excluir_Click(object sender, EventArgs e)
    {

@@ -6,11 +6,12 @@ body {
    font-family: Arial, helvetica;
 }
 
+
 /* CABEÇALHO */
 
 .cabecalho {
    height: 90px;
-   background-color: #72b2b0;
+   background-color: white;
    border-bottom: 1px solid #c0c0c0;
    width: 100%;
    position: relative;
@@ -32,15 +33,15 @@ body {
 }
 
    .menu a {
-      color: white;
+      color: #636363;
       font-size: 12px;
       margin-right: 10px;
       text-decoration: none;
-      font-weight: bold;
    }
 
       .menu a:hover {
-         color: #6b6d6d;
+         color: black;
+         border-bottom: 4px solid black;
       }
 
 /* CONTEÚDO */

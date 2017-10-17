@@ -7,15 +7,8 @@ using System.Web.UI.WebControls;
 
 public partial class MasterPage : System.Web.UI.MasterPage
 {
-<<<<<<< HEAD
    protected void Page_Load(object sender, EventArgs e)
    {
 
    }
-=======
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
-    }
->>>>>>> testing
 }
