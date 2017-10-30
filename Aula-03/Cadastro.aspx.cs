@@ -12,8 +12,14 @@ public partial class Cadastro : System.Web.UI.Page
 {
    protected void Page_Load(object sender, EventArgs e)
    {
-      if (! IsPostBack)
+      if (!IsPostBack)
       {
+         if (Request.QueryString["c"] != null)
+         {
+            LoadCandidato(Request.QueryString["c"].ToString());
+         }
+
+
          LoadCompetencias();
       }
    }
@@ -33,44 +39,65 @@ public partial class Cadastro : System.Web.UI.Page
       ole.ConnectionString = conexao;
       DataTable tb = (DataTable)ole.Query("SELECT * FROM Competencias ORDER BY Nome;");
 
-      for(int i=0; i<= tb.Rows.Count -1; i++)
+      for (int i = 0; i <= tb.Rows.Count - 1; i++)
       {
          Competencias.Items.Add(new ListItem(tb.Rows[i]["Nome"].ToString(), tb.Rows[i]["CompetenciaId"].ToString()));
       }
    }
-
 
    protected void Gravar_Click(object sender, EventArgs e)
    {
       if (Nome.Text.Trim() == "")
       {
          MsgErro.Text = "O Nome deve ser digitado";
+         MsgErro.Visible = true;
       }
       else if (Email.Text.Trim() == "")
       {
          MsgErro.Text = "O email deve ser digitado";
+         MsgErro.Visible = true;
       }
       else
       {
-         string sql = "INSERT INTO Candidatos(Nome,Email,Telefone,Resumo) VALUES('" + Nome.Text + "','" + Email.Text + "','" + Telefone.Text + "','" + Resumo.Text + "');";
+         string sql = "";
 
-         ole.ConnectionString = conexao;
-         if ((int)ole.Query(sql) == 1)
+         if (CandidatoId.Value != "")
          {
-            //OBTEM O ID DO CANDIDATO QUE FOI INSERIDO
-            DataTable t = (DataTable)ole.Query("SELECT MAX(CandidatoId) AS ID FROM Candidatos");
-            string candidatoId = t.Rows[0]["ID"].ToString();
+            sql = "UPDATE Candidatos SET Nome='" + Nome.Text + "',Email='" + Email.Text + "',Telefone='" + Telefone.Text + "',Resumo='" + Resumo.Text + "',Nascimento='" + Nascimento.Text + "',Sexo=" + Sexo.SelectedValue + ",Cep='" + Cep.Text + "',GrauInstrucao=" + GrauInstrucao.SelectedValue + ",CursoFatec=" + CursoFatec.SelectedValue + ",AnoConclusao='" + AnoConclusao.Text + "'  WHERE CandidatoId=" + CandidatoId.Value + ";";
+            ole.ConnectionString = conexao;
+            if ((int)ole.Query(sql) == 1)
+            {
 
-            // grava as competencias do candidato
-            GravaCompetencias(candidatoId);
-
-            Entrada.Visible = false;
-            fimCadastro.Visible = true;
-            limpar();
+            }
          }
          else
          {
-            MsgErro.Text = "Houve uma falha no cadastro, tente novamente.";
+            sql = "INSERT INTO Candidatos(Nome,Email,Telefone,Resumo,Nascimento,Sexo,Cep,GrauInstrucao,CursoFatec,AnoConclusao) VALUES('" + Nome.Text + "','" + Email.Text + "','" + Telefone.Text + "','" + Resumo.Text + "','" + Nascimento.Text + "'," + Sexo.SelectedValue + ",'" + Cep.Text + "'," + GrauInstrucao.SelectedValue + "," + CursoFatec.SelectedValue + ",'" + AnoConclusao.Text + "');";
+
+            ole.ConnectionString = conexao;
+            if ((int)ole.Query(sql) == 1)
+            {
+               //OBTEM O ID DO CANDIDATO QUE FOI INSERIDO
+               DataTable t = (DataTable)ole.Query("SELECT MAX(CandidatoId) AS ID FROM Candidatos");
+               string candidatoId = t.Rows[0]["ID"].ToString();
+
+               // grava as competencias do candidato
+               GravaCompetencias(candidatoId);
+
+               // INSERE O CANDIDATO NA TABELA DE USUÁRIOS
+               sql = "INSERT INTO Usuarios(CandidatoId,Status,NomeLogin,Senha) VALUES(" + candidatoId + ",0,'" + NomeLogin.Text + "','" + Senha.Text + "');";
+               ole.Query(sql);
+
+               Entrada.Visible = false;
+               MensagemFinal .Visible = true;
+               limpar();
+            }
+            else
+            {
+               MsgErro.Text = "Houve uma falha no cadastro, tente novamente.";
+               MsgErro.Visible = true;
+            }
+
          }
       }
    }
@@ -81,10 +108,14 @@ public partial class Cadastro : System.Web.UI.Page
       Email.Text = "";
       Telefone.Text = "";
       Resumo.Text = "";
+      Nascimento.Text = "";
+      Cep.Text = "";
+      AnoConclusao.Text = "";
+      NomeLogin.Text = "";
+      Senha.Text = "";
    }
 
-
-   private void GravaCompetencias( string candidatoId)
+   private void GravaCompetencias(string candidatoId)
    {
       // GRAVA AS COMPETENCIAS DO CANDIDATO 
 
@@ -94,10 +125,53 @@ public partial class Cadastro : System.Web.UI.Page
       {
          if (Competencias.Items[i].Selected)
          {
-           string comando = "INSERT INTO CandidatosCompetencias(CompetenciaId,CandidatoId) VALUES(" + Competencias.Items[i].Value.ToString() + "," + candidatoId + ");";
+            string comando = "INSERT INTO CandidatosCompetencias(CompetenciaId,CandidatoId) VALUES(" + Competencias.Items[i].Value.ToString() + "," + candidatoId + ");";
 
             ole.Query(comando);
          }
       }
    }
+
+
+   protected void LoadCandidato(string candidatoId)
+   {
+      ole.ConnectionString = conexao;
+      DataTable tb = (DataTable)ole.Query("SELECT * FROM Candidatos WHERE CandidatoId=" + candidatoId);
+      if (tb.Rows.Count == 1)
+      {
+         CandidatoId.Value = candidatoId;
+         Nome.Text = tb.Rows[0]["Nome"].ToString();
+         Email.Text = tb.Rows[0]["Email"].ToString();
+         Telefone.Text = tb.Rows[0]["Telefone"].ToString();
+         Resumo.Text = tb.Rows[0]["Resumo"].ToString();
+
+         // SELECIONA AS COMPETENCIAS DESTE CANDIDATO
+         DefineCompetencias(candidatoId);
+
+         // Ativa os botões
+         Gravar.Enabled = true;
+      }
+   }
+
+   protected void DefineCompetencias(string candidatoId)
+   {
+      ole.ConnectionString = conexao;
+      DataTable tb = new DataTable();
+
+      foreach (ListItem it in Competencias.Items)
+      {
+         tb = (DataTable)ole.Query("SELECT * FROM CandidatosCompetencias WHERE CandidatoId=" + candidatoId + " AND CompetenciaId=" + it.Value + ";");
+         if (tb.Rows.Count == 1)
+         {
+            it.Selected = true;
+         }
+         else
+         {
+            it.Selected = false;
+         }
+         tb.Dispose();
+      }
+   }
+
+
 }

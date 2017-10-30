@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Activities;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,10 +17,6 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
          LoadCompetencias();
          LoadCandidatos();
       }
-       CandidatoId.Visible = false;
-       Gravar.Visible = false;
-       Excluir.Visible = false;
-       LimparBusca.Visible = false;
    }
 
    // referencia de strings de conexão:https://www.connectionstrings.com
@@ -69,8 +64,7 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
       }
       else
       {
-          string sql = "UPDATE Candidatos SET Nome='" + Nome.Text + "',Email='" + Email.Text + "',Telefone='" +
-                       Telefone.Text + "',Resumo='" + Resumo.Text + "'WHERE CandidatoId=" + CandidatoId.Text + ";";
+         string sql = "UPDATE Candidatos SET Nome='" + Nome.Text + "',Email='" + Email.Text + "',Telefone='" + Telefone.Text + "',Resumo='" + Resumo.Text + "' WHERE CandidatoId=" + CandidatoId.Text + ";";
 
          ole.ConnectionString = conexao;
          if ((int)ole.Query(sql) == 1)
@@ -82,7 +76,7 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
          }
          else
          {
-            MsgErro.Text = "Houve uma falha no cadastro, tente novamente.";
+            MsgErro.Text = "Ocorreu uma falha no cadastro, tente novamente.";
          }
       }
    }
@@ -90,20 +84,22 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
    private void limpar()
    {
       CandidatoId.Text = "";
-      CandidatoId.Visible = false;
       Nome.Text = "";
       Email.Text = "";
       Telefone.Text = "";
       Resumo.Text = "";
+      // Desativa os botões
+      Gravar.Enabled = false;
+      Excluir.Enabled = false;
+
       LoadCompetencias();
       LoadCandidatos();
-      Gravar.Visible = false;
-      Excluir.Visible = false;
-    }
+   }
 
    private void GravaCompetencias(string candidatoId)
    {
       // GRAVA AS COMPETENCIAS DO CANDIDATO 
+
       ole.ConnectionString = conexao;
 
       ole.Query("DELETE FROM CandidatosCompetencias WHERE CandidatoId=" + candidatoId + ";");
@@ -117,8 +113,8 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
             ole.Query(comando);
          }
       }
+      LoadCandidatos();
    }
-
 
    protected void Buscar_Click(object sender, EventArgs e)
    {
@@ -129,6 +125,7 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
    protected void LimparBusca_Click(object sender, EventArgs e)
    {
       BuscarNome.Text = "";
+      LimparBusca.Visible = false;
       LoadCandidatos();
    }
 
@@ -147,37 +144,40 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
          // SELECIONA AS COMPETENCIAS DESTE CANDIDATO
          DefineCompetencias(CandidatoId.Text);
 
-          // ATIVA OS BOTÕES E O CANDIDATOID
-          CandidatoId.Visible = true;
-          Gravar.Visible = true;
-          Excluir.Visible = true;
-        }
+         // Ativa os botões
+         Gravar.Enabled = true;
+         Excluir.Enabled = true;
+      }
    }
 
    protected void DefineCompetencias(string candidatoId)
    {
       ole.ConnectionString = conexao;
       DataTable tb = new DataTable();
+
       foreach (ListItem it in Competencias.Items)
       {
          tb = (DataTable)ole.Query("SELECT * FROM CandidatosCompetencias WHERE CandidatoId=" + candidatoId + " AND CompetenciaId=" + it.Value + ";");
-          if (tb.Rows.Count == 1)
-          {
-              it.Selected = true;
-          }
-          else
-          {
-              it.Selected = false;
-          }
+         if (tb.Rows.Count == 1)
+         {
+            it.Selected = true;
+         }
+         else
+         {
+            it.Selected = false;
+         }
          tb.Dispose();
       }
    }
 
+
    protected void Excluir_Click(object sender, EventArgs e)
    {
-       ole.ConnectionString = conexao;
-       ole.Query("DELETE FROM CandidatosCompetencias WHERE CandidatoId=" + CandidatoId.Text + ";");
-       ole.Query("DELETE FROM Candidatos WHERE CandidatoId=" + CandidatoId.Text + ";");
-       limpar();
-    }
+      ole.ConnectionString = conexao;
+      // DELETA AS COMPETENCIAS DO CANDIDATO
+      ole.Query("DELETE FROM CandidatosCompetencias WHERE CandidatoId=" + CandidatoId.Text + ";");
+      // DELETA O CANDIDATO
+      ole.Query("DELETE FROM Candidatos WHERE CandidatoId=" + CandidatoId.Text + ";");
+      limpar();
+   }
 }

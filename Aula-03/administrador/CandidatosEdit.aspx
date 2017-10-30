@@ -7,7 +7,7 @@
    <div style="padding: 20px;">
       <asp:TextBox ID="BuscarNome" Width="180px" CssClass="form-control" runat="server"></asp:TextBox>
       <asp:Button ID="Buscar" Width="80px" OnClick="Buscar_Click" runat="server" Text="Buscar" />
-      <asp:Button ID="LimparBusca" Width="50px" OnClick="LimparBusca_Click" runat="server" Text="X" />
+      <asp:Button ID="LimparBusca" Visible="false" Width="50px" OnClick="LimparBusca_Click" runat="server" Text="X" />
    </div>
    <!-- GRID -->
    <div style="padding: 20px;">
@@ -37,9 +37,8 @@
          <asp:TextBox ID="Resumo" CssClass="form-control" runat="server" TextMode="MultiLine" Rows="6"></asp:TextBox>
          <br />
          <br />
-         <asp:Button ID="Gravar" OnClick="Gravar_Click" runat="server" Text="Gravar" />
-         <br/><br/>
-         <asp:Button ID="Excluir" OnClick="Excluir_Click" runat="server" Text="Excluir" />
+         <asp:Button ID="Gravar" Enabled="false" OnClick="Gravar_Click" runat="server" Text="Gravar" />
+         <asp:Button ID="Excluir" Enabled="false" OnClick="Excluir_Click" runat="server" Text="Excluir" />
       </div>
       <!-- FORMULÁRIO DAS COMPETENCIAS -->
       <div style="float: left; margin-left: 30px; width: 35%;">

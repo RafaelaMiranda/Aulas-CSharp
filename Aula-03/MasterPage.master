@@ -5,26 +5,77 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head runat="server">
-   <title></title>
+   <title>ADS-FATEC</title>
+   <!-- EXIBE O ICONE NA BARRA DO NAVEGADOR-->
+   <link rel="shortcut icon" type="image/x-icon" href="images/icon.png" />
+   <meta charset="UTF-8" />
+
+   <!-- METADADOS PARA INDEXAÇÃO NA BUSCA DO GOOGLE-->
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   <meta name="title" content="ADS-FATEC" />
+   <meta name="language" content="pt" />
+   <meta name="country" content="br" />
+   <meta name="keywords" content=".net,programação,web,java,visual studio" />
+   <meta name="description" content="..." />
+   <meta name="author" content="Datapost" />
+   <meta name="copyright" content="Copyright Datapost" />
+   <meta name="viewport" content="width=device-width,initial-scale=1" />
+   <meta name="google" content="notranslate" />
+   <meta name="robots" content="index, follow" />
+   <meta name="google-site-verification" content="" />
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+   <meta name="apple-mobile-web-app-status-bar-style" content="#0066CC" />
+   <meta name="HandheldFriendly" content="True" />
+   <meta name="MobileOptimized" content="320" />
+   <meta name="format-detection" content="telephone=no" />
+   <meta http-equiv="cleartype" content="on" />
+   <meta property="og:locale" content="pt_BR" />
+   <meta property="og:url" content="http://datapost.com.br" />
+   <meta property="og:title" content="datapost" />
+   <meta property="og:site_name" content="datapost" />
+   <meta property="og:description" content="framework datapost" />
+   <meta property="og:image" content="http://equinogestor.com.br/app_root/assets/images/og-facebook.png" />
+   <meta property="og:image:type" content="image/jpeg" />
+   <meta property="og:image:width" content="1200" />
+   <meta property="og:image:height" content="628" />
+   <meta property="og:type" content="website" />
+
+   <!-- CARREGA O ARQUINO CSS -->
+   <link rel="stylesheet" type="text/css" href="~/css/StyleSheet.css" />
+
+   <!-- CARREGA O ARQUINO CSS DO SLIDER -->
+   <link rel="stylesheet" type="text/css" href="~/js/flexslider/flexslider.css" />
+   <!-- CARREGA O JAVASCRIPT DO SLIDER -->
+   <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+   <script type="text/javascript" src="js/flexslider/flexslider.min.js"></script>
+
    <asp:ContentPlaceHolder ID="head" runat="server">
    </asp:ContentPlaceHolder>
-   <link href="~/css/StyleSheet.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
    <form id="form1" runat="server">
+      <!-- NECESSÁRIO PARA UTILIZAR OS CONTROLES AJAXTOOKIT -->
+      <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true">
+      </asp:ScriptManager>
       <!-- ÁREA DO CABEÇALHO -->
-      <div class="cabecalho" >
+      <div class="cabecalho">
          <!-- LOGOMARCA -->
-         <div class="logomarca" >
+         <div class="logomarca">
             <asp:Image ID="Image1" ImageUrl="~/images/marca.png" runat="server" />
          </div>
+         <!-- LOGIN -->
+         <div style="position: absolute; top: 10px; right: 10px;">
+            <asp:Button ID="Entrar" CausesValidation="false" OnClick="Entrar_Click"  runat="server" Text="Entrar" />
+            <asp:Button ID="Sair" CausesValidation="false" OnClick="Sair_Click" Visible="false" runat="server" Text="Sair" />
+         </div>
+
          <!--MENU -->
          <div class="menu">
             <a href="../Default.aspx">HOME</a>
-            <a href="../Sobre.aspx">SOBRE</a> 
-            <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Cadastro.aspx" runat="server">CADASTRO</asp:HyperLink>
-            <asp:HyperLink ID="HyperLink2" NavigateUrl="~/administrador/CandidatosEdit.aspx" runat="server">EDITAR CADASTRO </asp:HyperLink>
+            <a href="../Sobre.aspx">SOBRE</a>
+            <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Cadastro.aspx" runat="server">INSERIR CADASTRO</asp:HyperLink>
+            <asp:HyperLink ID="EditarCadastro" Visible="false" NavigateUrl="~/administrador/CandidatosEdit.aspx" runat="server">EDITAR CADASTRO </asp:HyperLink>
          </div>
       </div>
       <!-- ÁREA DO CONTEÚDO -->
