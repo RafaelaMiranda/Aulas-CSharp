@@ -38,7 +38,9 @@
          <br />
          <br />
          <asp:Button ID="Gravar" Enabled="false" OnClick="Gravar_Click" runat="server" Text="Gravar" />
+         <br /><br />
          <asp:Button ID="Excluir" Enabled="false" OnClick="Excluir_Click" runat="server" Text="Excluir" />
+         <br /><br />
       </div>
       <!-- FORMULÁRIO DAS COMPETENCIAS -->
       <div style="float: left; margin-left: 30px; width: 35%;">
@@ -47,6 +49,7 @@
          <asp:CheckBoxList ID="Competencias" Font-Size="14px" RepeatDirection="Vertical" runat="server"></asp:CheckBoxList>
       </div>
    </div>
+   <div style="clear:both;"></div>
 
 </asp:Content>
 

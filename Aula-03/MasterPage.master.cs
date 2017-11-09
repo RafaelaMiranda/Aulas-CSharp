@@ -18,12 +18,15 @@ public partial class MasterPage : System.Web.UI.MasterPage
          if (Session["Status"].ToString() == "1")
          {
             EditarCadastro.Visible = true;
+            Competencias.Visible = true;
             Entrar.Visible = false;
             Sair.Visible = true;
          }
-      }else
+      }
+      else
       {
          EditarCadastro.Visible = false;
+         Competencias.Visible = false;
          Entrar.Visible = true;
          Sair.Visible = false;
       }
@@ -31,11 +34,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
    protected void Entrar_Click(object sender, EventArgs e)
    {
-      Response.Redirect("login.aspx");
+      Response.Redirect("~/login.aspx");
    }
 
    protected void Sair_Click(object sender, EventArgs e)
    {
-      Response.Redirect("logout.aspx");
+      Response.Redirect("~/logout.aspx");
    }
 }
