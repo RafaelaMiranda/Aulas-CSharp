@@ -25,7 +25,7 @@
          <asp:Label ID="MsgErro" runat="server" Style="color: red; font-weight: bold" />
          <br />
 
-          <asp:HiddenField ID="CompetenciaId" runat="server"></asp:HiddenField>
+          <asp:label ID="CompetenciaId" CssClass="form-control" runat="server"></asp:label>
 
          <label>Nome</label>
          <asp:TextBox ID="Nome" CssClass="form-control" runat="server"></asp:TextBox>

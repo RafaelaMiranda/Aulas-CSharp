@@ -39,7 +39,7 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
 
     private void limpar()
     {
-        CompetenciaId.Value = "";
+        CompetenciaId.Text = "";
         Nome.Text = "";
         MsgErro.Text = "";
         LoadCompetencias();
@@ -64,7 +64,7 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
         DataTable tb = (DataTable)ole.Query("SELECT * FROM Competencias WHERE CompetenciaId=" + Competencia.SelectedRow.Cells[1].Text.ToString());
         if (tb.Rows.Count == 1)
         {
-            CompetenciaId.Value = tb.Rows[0]["CompetenciaId"].ToString();
+            CompetenciaId.Text = tb.Rows[0]["CompetenciaId"].ToString();
             Nome.Text = tb.Rows[0]["Nome"].ToString();
 
             // Ativa os botões
@@ -76,7 +76,7 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
     protected void Excluir_Click(object sender, EventArgs e)
     {
         ole.ConnectionString = conexao;
-        ole.Query("DELETE FROM Competencias WHERE CompetenciaId=" + CompetenciaId.Value + ";");
+        ole.Query("DELETE FROM Competencias WHERE CompetenciaId=" + CompetenciaId.Text + ";");
         limpar();
     }
 
@@ -92,7 +92,7 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
         }
         else
         {
-            if (CompetenciaId.Value == "")
+            if (CompetenciaId.Text == "")
             {
                 Gravar_Click();
 
@@ -109,7 +109,7 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
     protected void Editar_Click()
     {
         ole.ConnectionString = conexao;
-        ole.Query("UPDATE Competencias SET Nome='" + Nome.Text + "' WHERE CompetenciaId=" + CompetenciaId.Value + " ;");
+        ole.Query("UPDATE Competencias SET Nome='" + Nome.Text + "' WHERE CompetenciaId=" + CompetenciaId.Text + " ;");
         limpar();
     }
 

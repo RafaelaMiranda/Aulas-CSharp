@@ -74,6 +74,7 @@
          <div class="menu">
             <a href="../Default.aspx">HOME</a>
             <a href="../Sobre.aspx">SOBRE</a>
+            <a href="FaleConosco.aspx">FALE CONOSCO</a>
             <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Cadastro.aspx" runat="server">INSERIR CADASTRO</asp:HyperLink>
             <asp:HyperLink ID="EditarCadastro" Visible="false" NavigateUrl="~/administrador/CandidatosEdit.aspx" runat="server">EDITAR CADASTRO </asp:HyperLink>
             <asp:HyperLink ID="Competencias" Visible="false" NavigateUrl="~/administrador/Competencias.aspx" runat="server">COMPETENCIAS</asp:HyperLink>

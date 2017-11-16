@@ -236,3 +236,115 @@ System.InvalidOperationException
 Void Application_Error(System.Object, System.EventArgs)
 29
 -----------------------------------------------
+09/11/2017 17:19:23
+Control of type 'HiddenField' does not support theming.
+System.Web
+System.NotSupportedException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+09/11/2017 17:19:33
+Control of type 'HiddenField' does not support theming.
+System.Web
+System.NotSupportedException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+14/11/2017 15:57:46
+The file '/FaleConosco.aspx' does not exist.
+System.Web
+System.Web.HttpException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+14/11/2017 16:00:31
+e:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-03\Cadastro.aspx.cs(45): error CS0103: The name 'Competencias' does not exist in the current context
+System.Web
+System.Web.HttpCompileException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+14/11/2017 16:01:03
+e:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-03\Cadastro.aspx.cs(45): error CS0103: The name 'Competencias' does not exist in the current context
+System.Web
+System.Web.HttpCompileException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+14/11/2017 16:01:12
+e:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-03\Cadastro.aspx.cs(53): error CS0103: The name 'MsgErro' does not exist in the current context
+System.Web
+System.Web.HttpCompileException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+14/11/2017 16:02:32
+The 'inherits' attribute cannot be an empty string.
+System.Web
+System.Web.HttpParseException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+14/11/2017 16:03:09
+The 'inherits' attribute cannot be an empty string.
+System.Web
+System.Web.HttpParseException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+14/11/2017 16:03:45
+e:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-03\Cadastro.aspx.cs(45): error CS0103: The name 'Competencias' does not exist in the current context
+System.Web
+System.Web.HttpCompileException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+14/11/2017 16:04:27
+e:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-03\Cadastro.aspx.cs(45): error CS0103: The name 'Competencias' does not exist in the current context
+System.Web
+System.Web.HttpCompileException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+14/11/2017 16:05:11
+e:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-03\FaleConosco.aspx(83): error CS1061: 'ASP.faleconosco_aspx' does not contain a definition for 'Gravar_Click' and no extension method 'Gravar_Click' accepting a first argument of type 'ASP.faleconosco_aspx' could be found (are you missing a using directive or an assembly reference?)
+System.Web
+System.Web.HttpCompileException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+14/11/2017 16:06:21
+e:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-03\FaleConosco.aspx(35): error CS1061: 'ASP.faleconosco_aspx' does not contain a definition for 'Gravar_Click' and no extension method 'Gravar_Click' accepting a first argument of type 'ASP.faleconosco_aspx' could be found (are you missing a using directive or an assembly reference?)
+System.Web
+System.Web.HttpCompileException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+14/11/2017 16:25:53
+Failure sending mail.
+System
+System.Net.Mail.SmtpException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+14/11/2017 16:27:19
+Failure sending mail.
+System
+System.Net.Mail.SmtpException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+14/11/2017 16:32:32
+Failure sending mail.
+System
+System.Net.Mail.SmtpException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
+16/11/2017 17:01:03
+e:\Fatec\4º Semestre\C#\Aulas-CSharp-master\Aula-03\FaleConosco.aspx(36): error CS0123: No overload for 'Gravar_Click' matches delegate 'System.EventHandler'
+System.Web
+System.Web.HttpCompileException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------
