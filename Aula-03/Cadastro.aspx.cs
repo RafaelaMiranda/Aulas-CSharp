@@ -21,7 +21,6 @@ public partial class Cadastro : System.Web.UI.Page
 
 
             LoadCompetencias();
-
         }
     }
 
@@ -60,11 +59,21 @@ public partial class Cadastro : System.Web.UI.Page
         }
         else
         {
+            // GRAVA A FOTO DO CANDIDATO
+            if (FotoUpload.HasFiles)
+            {
+                // Define o caminho da gravação
+                CaminhoFoto.Value = "~/candidato_foto/" + FotoUpload.FileName;
+                string caminhoFisico = Server.MapPath(CaminhoFoto.Value);
+                // Salva o arquivo na pasta
+                FotoUpload.SaveAs(caminhoFisico);
+            }
+
             string sql = "";
 
             if (CandidatoId.Value != "")
             {
-                sql = "UPDATE Candidatos SET Nome='" + Nome.Text + "',Email='" + Email.Text + "',Telefone='" + Telefone.Text + "',Resumo='" + Resumo.Text + "',Nascimento='" + Nascimento.Text + "',Sexo=" + Sexo.SelectedValue + ",Cep='" + Cep.Text + "',GrauInstrucao=" + GrauInstrucao.SelectedValue + ",CursoFatec=" + CursoFatec.SelectedValue + ",AnoConclusao='" + AnoConclusao.Text + "'  WHERE CandidatoId=" + CandidatoId.Value + ";";
+                sql = "UPDATE Candidatos SET Nome='" + Nome.Text + "',Email='" + Email.Text + "',Telefone='" + Telefone.Text + "',Resumo='" + Resumo.Text + "',Nascimento='" + Nascimento.Text + "',Sexo=" + Sexo.SelectedValue + ",Cep='" + Cep.Text + "',GrauInstrucao=" + GrauInstrucao.SelectedValue + ",CursoFatec=" + CursoFatec.SelectedValue + ",AnoConclusao='" + AnoConclusao.Text + "',Foto='" + CaminhoFoto.Value + "'  WHERE CandidatoId=" + CandidatoId.Value + ";";
                 ole.ConnectionString = conexao;
                 if ((int)ole.Query(sql) == 1)
                 {
@@ -73,7 +82,7 @@ public partial class Cadastro : System.Web.UI.Page
             }
             else
             {
-                sql = "INSERT INTO Candidatos(Nome,Email,Telefone,Resumo,Nascimento,Sexo,Cep,GrauInstrucao,CursoFatec,AnoConclusao) VALUES('" + Nome.Text + "','" + Email.Text + "','" + Telefone.Text + "','" + Resumo.Text + "','" + Nascimento.Text + "'," + Sexo.SelectedValue + ",'" + Cep.Text + "'," + GrauInstrucao.SelectedValue + "," + CursoFatec.SelectedValue + ",'" + AnoConclusao.Text + "');";
+                sql = "INSERT INTO Candidatos(Nome,Email,Telefone,Resumo,Nascimento,Sexo,Cep,GrauInstrucao,CursoFatec,AnoConclusao,Foto) VALUES('" + Nome.Text + "','" + Email.Text + "','" + Telefone.Text + "','" + Resumo.Text + "','" + Nascimento.Text + "'," + Sexo.SelectedValue + ",'" + Cep.Text + "'," + GrauInstrucao.SelectedValue + "," + CursoFatec.SelectedValue + ",'" + AnoConclusao.Text + "','" + CaminhoFoto.Value + "');";
 
                 ole.ConnectionString = conexao;
                 if ((int)ole.Query(sql) == 1)
@@ -114,6 +123,7 @@ public partial class Cadastro : System.Web.UI.Page
         AnoConclusao.Text = "";
         NomeLogin.Text = "";
         Senha.Text = "";
+        CaminhoFoto.Value = "";
     }
 
     private void GravaCompetencias(string candidatoId)
@@ -145,6 +155,14 @@ public partial class Cadastro : System.Web.UI.Page
             Email.Text = tb.Rows[0]["Email"].ToString();
             Telefone.Text = tb.Rows[0]["Telefone"].ToString();
             Resumo.Text = tb.Rows[0]["Resumo"].ToString();
+
+            if (tb.Rows[0]["Foto"].ToString() != "")
+            {
+                Foto.ImageUrl = ResolveUrl(tb.Rows[0]["Foto"].ToString());
+                Foto.Visible = true;
+            }
+
+            else Foto.Visible = false;
 
             // SELECIONA AS COMPETENCIAS DESTE CANDIDATO
             DefineCompetencias(candidatoId);

@@ -136,6 +136,7 @@ public partial class administrador_CandidatosEdit : System.Web.UI.Page
       if (tb.Rows.Count == 1)
       {
          CandidatoId.Text = tb.Rows[0]["CandidatoId"].ToString();
+         ImagemCandidato.ImageUrl = tb.Rows[0]["Foto"].ToString();
          Nome.Text = tb.Rows[0]["Nome"].ToString();
          Email.Text = tb.Rows[0]["Email"].ToString();
          Telefone.Text = tb.Rows[0]["Telefone"].ToString();

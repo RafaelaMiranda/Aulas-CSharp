@@ -348,3 +348,10 @@ System.Web.HttpCompileException
 Void Application_Error(System.Object, System.EventArgs)
 29
 -----------------------------------------------
+23/11/2017 17:15:40
+Data type mismatch in criteria expression.
+Microsoft Office Access Database Engine
+System.Data.OleDb.OleDbException
+Void Application_Error(System.Object, System.EventArgs)
+29
+-----------------------------------------------

@@ -23,6 +23,10 @@
       <!-- FORMULÁRIO DE CADASTRO -->
       <div style="float: left; width: 40%;">
          <asp:Label ID="MsgErro" runat="server" />
+          <br />
+          <br />
+          <asp:Image ID="ImagemCandidato" runat="server" Height="123px" Width="171px" />
+          <br />
          <br />
 
          <asp:Label ID="CandidatoId" CssClass="form-control" runat="server"></asp:Label>
